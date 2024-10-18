@@ -1,0 +1,126 @@
+/* Navbar.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    background-color: rgb(255, 255, 255);
+    padding: 15px 30px;
+    height: 100px;
+    width: 100%;
+
+}
+
+.logo {
+    display: flex;
+    float: left;
+    flex-direction: row;
+    color: black;
+    font-size: 10px;
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    transition:  0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background: #555;
+    color: white; 
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: black;
+    cursor: pointer;
+}
+
+.cart img {
+    width: 30px; 
+    height: 10px; 
+    
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+.search {
+    position: relative; /* For positioning the icon */
+    width: 250px; /* Adjust width to fit design */
+}
+
+.search input {
+    width: 100%; /* Full width of the container */
+    padding: 10px 40px 10px 40px; /* Space for the icon */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 50px; /* Rounded corners */
+}
+
+.search img {
+    position: absolute; /* Position the icon */
+    left: 10px; /* Space from left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    width: 20px; /* Adjust icon size */
+    height: 20px; /* Adjust icon size */
+    pointer-events:all; /* Prevent clicks on the icon */
+}
+.cart-counter{
+    border: 6px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    padding: auto;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    margin-top: -35px;
+    margin-left: -40px;
+
+}
